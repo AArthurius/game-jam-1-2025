@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbb447ncqhpdo"]
+
+[ext_resource type="Texture2D" uid="uid://8yrtk2fsqn1v" path="res://Assets/bar.png" id="1_w7mdm"]
+[ext_resource type="Script" uid="uid://bi8ynmuvismlj" path="res://Scenes/Inventory menu/item_barra.gd" id="2_16kcl"]
+
+[node name="Item Barra" type="TextureRect"]
+texture = ExtResource("1_w7mdm")
+script = ExtResource("2_16kcl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 258.0
+offset_bottom = 39.0
