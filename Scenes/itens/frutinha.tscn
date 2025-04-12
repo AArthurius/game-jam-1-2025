@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmbhk332up2k2"]
 
 [ext_resource type="Script" uid="uid://bfhk83cx4sha4" path="res://Scenes/itens/frutinha.gd" id="1_4vi2w"]
-[ext_resource type="Texture2D" uid="uid://cguxiotrnd3r" path="res://Assets/Placeholder/frutinha.png" id="2_utuuc"]
+[ext_resource type="Texture2D" uid="uid://bbh1xlp645ox8" path="res://Assets/Placeholder/frutinha.png" id="2_utuuc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_50t1u"]
-radius = 16.0312
+radius = 9.0
 
 [node name="Frutinha" type="Area2D" groups=["item"]]
 collision_layer = 12

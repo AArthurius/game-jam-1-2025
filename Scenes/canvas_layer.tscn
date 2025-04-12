@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bud7kgbkfq8gb"]
+[gd_scene load_steps=5 format=3 uid="uid://bud7kgbkfq8gb"]
 
 [ext_resource type="Script" uid="uid://sor33s5cdvcu" path="res://Scenes/canvas_layer.gd" id="1_p1mel"]
 [ext_resource type="Texture2D" uid="uid://oj1j52uihok4" path="res://Assets/Placeholder/menu.png" id="2_u5uhc"]
 [ext_resource type="Script" uid="uid://cqaxkip20me1u" path="res://Scenes/Inventory menu/inventory.gd" id="3_o6y36"]
+[ext_resource type="FontFile" uid="uid://dy74jctltt37f" path="res://Assets/Placeholder/PixelOperator.ttf" id="4_u5uhc"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_p1mel")
@@ -15,35 +16,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="UI"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-
 [node name="InventoryTab" type="TextureRect" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 116.0
-offset_top = -250.0
-offset_right = 416.0
-offset_bottom = 250.0
+offset_left = 20.0
+offset_top = -105.0
+offset_right = 134.0
+offset_bottom = 85.0
 grow_vertical = 2
 texture = ExtResource("2_u5uhc")
 
 [node name="Inventory" type="VBoxContainer" parent="UI/InventoryTab"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 18.0
-offset_right = 282.0
-offset_bottom = 482.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 108.0
+offset_bottom = 184.0
 script = ExtResource("3_o6y36")
 
 [node name="Label" type="Label" parent="UI/InventoryTab"]
@@ -51,8 +42,9 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = -37.0
-offset_right = 54.0
-offset_bottom = -14.0
+offset_left = 7.0
+offset_top = -30.0
+offset_right = 47.0
+offset_bottom = -7.0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_u5uhc")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da1y282bm2tx6"
-path="res://.godot/imported/selectbar Selected.png-4929b6ea39d16d36f15c4f1ee90248cb.ctex"
+uid="uid://bootrxaj67sob"
+path="res://.godot/imported/flecha.png-1974e72b776f0ddeff0a334ea83de67b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder/selectbar Selected.png"
-dest_files=["res://.godot/imported/selectbar Selected.png-4929b6ea39d16d36f15c4f1ee90248cb.ctex"]
+source_file="res://Assets/flecha.png"
+dest_files=["res://.godot/imported/flecha.png-1974e72b776f0ddeff0a334ea83de67b.ctex"]
 
 [params]
 

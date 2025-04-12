@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4aiv1osgtaab"
-path="res://.godot/imported/selectbox.png-e3b2fca866ab795ae437ea612ab9a780.ctex"
+uid="uid://jpr5ex22fcxp"
+path="res://.godot/imported/Sprite-0001.png-c16feda97667151f1a063931ff67e2cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder/selectbox.png"
-dest_files=["res://.godot/imported/selectbox.png-e3b2fca866ab795ae437ea612ab9a780.ctex"]
+source_file="res://Assets/Sprite-0001.png"
+dest_files=["res://.godot/imported/Sprite-0001.png-c16feda97667151f1a063931ff67e2cc.ctex"]
 
 [params]
 

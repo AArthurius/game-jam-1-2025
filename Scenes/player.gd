@@ -5,12 +5,14 @@ extends CharacterBody2D
 
 @onready var canvas_layer: CanvasLayer = $"../CanvasLayer"
 
-const SPEED = 20000
+const SPEED = 10000
 
 var bonusSpeed: int = 0
 var direção: Vector2
 
 func _process(delta: float) -> void:
+	direção = Input.get_vector("A", "D", "W", "S")
+	
 	inventoryManager()
 	
 	lookDirection()
@@ -47,10 +49,7 @@ func inventoryManager():
 					area.delete()
 
 func _physics_process(delta: float) -> void:
-	direção = Input.get_vector("A", "D", "W", "S")
-	
 	velocity = direção * (SPEED + bonusSpeed) * delta
-	$"../CanvasLayer/UI/Label".text = str((SPEED + bonusSpeed) * delta)
 	
 	move_and_slide()
 

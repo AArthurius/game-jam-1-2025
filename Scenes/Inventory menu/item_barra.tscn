@@ -1,18 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbb447ncqhpdo"]
+[gd_scene load_steps=4 format=3 uid="uid://cbb447ncqhpdo"]
 
-[ext_resource type="Texture2D" uid="uid://8yrtk2fsqn1v" path="res://Assets/Placeholder/bar.png" id="1_w7mdm"]
+[ext_resource type="Texture2D" uid="uid://cxveebmfoi62p" path="res://Assets/Placeholder/selectbar.png" id="1_16kcl"]
 [ext_resource type="Script" uid="uid://bi8ynmuvismlj" path="res://Scenes/Inventory menu/item_barra.gd" id="2_16kcl"]
+[ext_resource type="FontFile" uid="uid://dy74jctltt37f" path="res://Assets/Placeholder/PixelOperator.ttf" id="3_m7vki"]
 
 [node name="Item Barra" type="TextureRect"]
-texture = ExtResource("1_w7mdm")
+texture = ExtResource("1_16kcl")
 script = ExtResource("2_16kcl")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 258.0
-offset_bottom = 39.0
+offset_left = 3.0
+offset_right = 95.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_m7vki")
 vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -22,10 +23,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -16.5
-offset_right = -6.0
-offset_bottom = 16.5
+offset_left = -15.0
+offset_top = -6.0
+offset_right = -3.0
+offset_bottom = 6.0
 grow_horizontal = 0
 grow_vertical = 2
 

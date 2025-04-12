@@ -2,8 +2,8 @@ extends TextureRect
 
 @onready var label: Label = $Label
 
-const BAR = preload("res://Assets/bar.png")
-const BAR_SELECTED = preload("res://Assets/bar selected.png")
+const BAR = preload("res://Assets/Placeholder/selectbar.png")
+const BAR_SELECTED = preload("res://Assets/Placeholder/bar selected.png")
 
 @onready var control: Control = $CenterContainer/Control
 
