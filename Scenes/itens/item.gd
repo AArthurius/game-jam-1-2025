@@ -3,7 +3,7 @@ class_name item
 
 var nome: String
 var pickable: bool
-var copy = preload("res://Scenes/itens/poção.tscn")
+var copy: PackedScene
 
 func useItem(player):
 	pass

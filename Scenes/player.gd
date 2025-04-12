@@ -9,13 +9,29 @@ const SPEED = 10000
 
 var bonusSpeed: int = 0
 var direção: Vector2
+var inGame = false
+
 
 func _process(delta: float) -> void:
 	direção = Input.get_vector("A", "D", "W", "S")
 	
-	inventoryManager()
-	
-	lookDirection()
+	if !inGame:
+		inventoryManager()
+		
+		if Input.is_action_just_pressed("interact"):
+			for area in area_2d.get_overlapping_areas():
+				print(area_2d.get_overlapping_areas())
+				if area.is_in_group("item") and area.pickable:
+					if canvas_layer.add_item(area):
+						area.delete()
+				if area.is_in_group("minigame"):
+					area.startMinigame()
+					inGame = true
+		
+		lookDirection()
+
+func minigameEnd():
+	inGame = false
 
 func lookDirection():
 	match direção:
@@ -41,14 +57,10 @@ func inventoryManager():
 	elif Input.is_action_just_pressed("scroll up"):
 		canvas_layer.scroll("up")
 		
-	
-	if Input.is_action_just_pressed("interact"):
-		for area in area_2d.get_overlapping_areas():
-			if area.is_in_group("item") and area.pickable:
-				if canvas_layer.add_item(area):
-					area.delete()
 
 func _physics_process(delta: float) -> void:
+	if inGame:
+		return
 	velocity = direção * (SPEED + bonusSpeed) * delta
 	
 	move_and_slide()

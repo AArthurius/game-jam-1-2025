@@ -2,6 +2,8 @@ extends CanvasLayer
 
 @onready var inventoryTab: TextureRect = $UI/InventoryTab
 @onready var inventory: VBoxContainer = $UI/InventoryTab/Inventory
+@onready var player: CharacterBody2D = $"../Player"
+
 
 func switchInventory():
 	inventoryTab.visible = !inventoryTab.visible
