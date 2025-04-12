@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfffinocfd0fs"
-path="res://.godot/imported/poção.png-0582cc8b877ee4de84c80b29f6e45d02.ctex"
+uid="uid://fbahi3w1xywf"
+path="res://.godot/imported/hotbar.png-15062f744c59d39f51ec917807d44640.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/poção.png"
-dest_files=["res://.godot/imported/poção.png-0582cc8b877ee4de84c80b29f6e45d02.ctex"]
+source_file="res://Assets/Placeholder/hotbar.png"
+dest_files=["res://.godot/imported/hotbar.png-15062f744c59d39f51ec917807d44640.ctex"]
 
 [params]
 

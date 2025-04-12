@@ -8,7 +8,7 @@ func switchInventory():
 	inventory.closed = !inventory.closed
 
 func add_item(area: item):
-	inventory.add_item(area)
+	return inventory.add_item(area)
 
 func use_item():
 	if !inventory.closed:

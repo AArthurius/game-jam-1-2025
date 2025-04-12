@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cguxiotrnd3r"
-path="res://.godot/imported/frutinha.png-ca090a62c2b7cf13e8874f617709fc5b.ctex"
+path="res://.godot/imported/frutinha.png-03f7fa866dcfb99872b46765cd26c5c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/frutinha.png"
-dest_files=["res://.godot/imported/frutinha.png-ca090a62c2b7cf13e8874f617709fc5b.ctex"]
+source_file="res://Assets/Placeholder/frutinha.png"
+dest_files=["res://.godot/imported/frutinha.png-03f7fa866dcfb99872b46765cd26c5c5.ctex"]
 
 [params]
 

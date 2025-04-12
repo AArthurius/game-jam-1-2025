@@ -4,23 +4,28 @@ extends TextureRect
 
 const BAR = preload("res://Assets/bar.png")
 const BAR_SELECTED = preload("res://Assets/bar selected.png")
+
 @onready var control: Control = $CenterContainer/Control
 
 
-var info
+@export var info: PackedScene
 var selected = false
-var realItem
+@export var realItem: item
 
 func _ready() -> void:
 	realItem = info.instantiate()
-	#itemInfo.visible = false
 	control.add_child(realItem)
 	label.text = realItem.nome
 
 func useItem(player):
-	realItem.useItem(player)
+	if realItem != null:
+		realItem.useItem(player)
+	else:
+		queue_free()
 
 func _process(delta: float) -> void:
+	if realItem == null:
+		queue_free()
 	if selected:
 		texture = BAR_SELECTED
 	else:

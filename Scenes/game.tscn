@@ -31,7 +31,7 @@ texture = ExtResource("1_qxrlw")
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_wrm1d")
 
-[node name="Game" type="Node2D"]
+[node name="Mapa 2 2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_3dryh")
@@ -60,6 +60,24 @@ position = Vector2(170, 130)
 
 [node name="Frutinha2" parent="Itens" instance=ExtResource("6_i6g32")]
 position = Vector2(283, 144)
+
+[node name="Frutinha4" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(227, 199)
+
+[node name="Frutinha5" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(230, 111)
+
+[node name="Frutinha6" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(185, 224)
+
+[node name="Frutinha7" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(177, 64)
+
+[node name="Frutinha8" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(67, 204)
+
+[node name="Frutinha9" parent="Itens" instance=ExtResource("6_i6g32")]
+position = Vector2(271, 198)
 
 [node name="Frutinha3" parent="Itens" instance=ExtResource("6_i6g32")]
 position = Vector2(342, 67)

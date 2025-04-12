@@ -43,8 +43,8 @@ func inventoryManager():
 	if Input.is_action_just_pressed("interact"):
 		for area in area_2d.get_overlapping_areas():
 			if area.is_in_group("item") and area.pickable:
-				canvas_layer.add_item(area)
-				area.delete()
+				if canvas_layer.add_item(area):
+					area.delete()
 
 func _physics_process(delta: float) -> void:
 	direção = Input.get_vector("A", "D", "W", "S")
