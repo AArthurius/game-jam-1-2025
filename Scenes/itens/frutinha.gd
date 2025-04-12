@@ -7,6 +7,6 @@ func inicializar():
 	copy = preload("res://Scenes/itens/frutinha.tscn")
 
 func useItem(player):
-	player.bonusSpeed = 5000
+	player.bonusSpeed += 10000
 	player.resetBonus.set_wait_time(2)
 	player.resetBonus.start()

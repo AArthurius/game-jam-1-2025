@@ -13,17 +13,8 @@ func _process(delta: float) -> void:
 	
 	selectItem()
 	
-	
-	if Input.is_action_just_pressed("E"):
-		use_item()
 
 func selectItem():
-	if Input.is_action_just_pressed("scroll down"):
-		selectedChild += 1
-		
-	elif Input.is_action_just_pressed("scroll up"):
-		selectedChild -= 1
-	
 	if selectedChild > get_children().size():
 		selectedChild = 0
 	elif selectedChild < 0 and get_children().size() > 0:
@@ -48,3 +39,4 @@ func use_item():
 	if get_child(selectedChild) != null:
 		get_child(selectedChild).useItem(player)
 		get_child(selectedChild).queue_free()
+		selectedChild = 0

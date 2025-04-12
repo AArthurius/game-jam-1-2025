@@ -33,8 +33,12 @@ func inventoryManager():
 	if Input.is_action_just_pressed("E"):
 		canvas_layer.use_item()
 	
-	
-	
+	if Input.is_action_just_pressed("scroll down"):
+		canvas_layer.scroll("down")
+		
+	elif Input.is_action_just_pressed("scroll up"):
+		canvas_layer.scroll("up")
+		
 	
 	if Input.is_action_just_pressed("interact"):
 		for area in area_2d.get_overlapping_areas():

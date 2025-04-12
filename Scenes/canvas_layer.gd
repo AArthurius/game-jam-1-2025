@@ -11,4 +11,11 @@ func add_item(area: item):
 	inventory.add_item(area)
 
 func use_item():
-	inventory.use_item()
+	if !inventory.closed:
+		inventory.use_item()
+
+func scroll(direction):
+	if direction == "down":
+		inventory.selectedChild += 1
+	elif direction == "up":
+		inventory.selectedChild -= 1
