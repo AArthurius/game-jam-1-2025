@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		for area in area_2d.get_overlapping_areas():
 			if area.is_in_group("item"):
-				print(item)
+				inventory.add_item(area)
 
 func _physics_process(delta: float) -> void:
 	var direção = Input.get_vector("A", "D", "W", "S")
