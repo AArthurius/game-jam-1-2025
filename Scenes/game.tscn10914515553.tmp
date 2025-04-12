@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://bf67vmtgg8ttm"]
+
+[ext_resource type="PackedScene" uid="uid://dl1j70r38mok0" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://djvql7gq0xy67" path="res://Mystery Pack 47.png" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://sor33s5cdvcu" path="res://Scenes/canvas_layer.gd" id="3_1l0tm"]
+[ext_resource type="Texture2D" uid="uid://oj1j52uihok4" path="res://Assets/menu.png" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://bfr2jjhbb58h6" path="res://Scenes/itens/poção.tscn" id="4_3dryh"]
+[ext_resource type="Script" uid="uid://cqaxkip20me1u" path="res://Scenes/Inventory menu/inventory.gd" id="4_wowpa"]
+[ext_resource type="PackedScene" uid="uid://dmbhk332up2k2" path="res://Scenes/itens/frutinha.tscn" id="6_i6g32"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
+texture = ExtResource("1_qxrlw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3dryh"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_wrm1d")
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3dryh")
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(52, 11)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_1l0tm")
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="InventoryTab" type="TextureRect" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 116.0
+offset_top = -250.0
+offset_right = 416.0
+offset_bottom = 250.0
+grow_vertical = 2
+texture = ExtResource("3_3dryh")
+
+[node name="Inventory" type="VBoxContainer" parent="CanvasLayer/UI/InventoryTab"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 282.0
+offset_bottom = 482.0
+script = ExtResource("4_wowpa")
+
+[node name="poção" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(60, 157)
+
+[node name="Frutinha" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(170, 130)

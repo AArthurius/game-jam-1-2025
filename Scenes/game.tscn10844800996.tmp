@@ -42,10 +42,10 @@ position = Vector2(52, 11)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
+[node name="CanvasLayer" parent="." instance=ExtResource("3_wowpa")]
+
 [node name="poção" parent="." instance=ExtResource("4_3dryh")]
 position = Vector2(60, 157)
 
 [node name="Frutinha" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(170, 130)
-
-[node name="CanvasLayer" parent="." instance=ExtResource("3_wowpa")]
