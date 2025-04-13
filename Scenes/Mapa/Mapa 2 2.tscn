@@ -162,7 +162,6 @@ limit_smoothed = true
 
 [node name="spawner" type="Node2D" parent="Player/Camera2D"]
 script = ExtResource("4_um5gg")
-ativado = true
 
 [node name="Marker2D" type="Marker2D" parent="Player/Camera2D/spawner"]
 position = Vector2(-211, -96)
