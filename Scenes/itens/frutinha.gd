@@ -1,10 +1,9 @@
 extends item
 
-
 func inicializar(): 
 	nome = "frutinha"
-	pickable = true
 	copy = preload("res://Scenes/itens/frutinha.tscn")
+	usable = true
 
 func useItem(player):
 	player.bonusSpeed += 10000

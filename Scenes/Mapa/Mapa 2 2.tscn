@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bf67vmtgg8ttm"]
+[gd_scene load_steps=11 format=4 uid="uid://bf67vmtgg8ttm"]
 
 [ext_resource type="Texture2D" uid="uid://b6rgm33vmqack" path="res://Assets/Sprite-0004.png" id="1_8c7xs"]
 [ext_resource type="PackedScene" uid="uid://dl1j70r38mok0" path="res://Scenes/player.tscn" id="2_q3j5h"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmbhk332up2k2" path="res://Scenes/itens/frutinha.tscn" id="4_42t2r"]
 [ext_resource type="Texture2D" uid="uid://fbahi3w1xywf" path="res://Assets/Placeholder/hotbar.png" id="5_q3j5h"]
 [ext_resource type="Script" uid="uid://bcjuovktdlm7f" path="res://Scenes/Minigames/minigame_starter.gd" id="5_timr8"]
+[ext_resource type="PackedScene" uid="uid://s04ebnto4vhi" path="res://Scenes/itens/item chave.tscn" id="7_42t2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6g32"]
 texture = ExtResource("1_8c7xs")
@@ -53,3 +54,9 @@ texture = ExtResource("5_q3j5h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame starter"]
 shape = SubResource("RectangleShape2D_timr8")
+
+[node name="Frutinha" parent="." instance=ExtResource("4_42t2r")]
+position = Vector2(37, 73)
+
+[node name="item chave" parent="." instance=ExtResource("7_42t2r")]
+position = Vector2(94, 68)

@@ -2,8 +2,8 @@ extends Node
 class_name item
 
 var nome: String
-var pickable: bool
 var copy: PackedScene
+var usable: bool
 
 func useItem(player):
 	pass

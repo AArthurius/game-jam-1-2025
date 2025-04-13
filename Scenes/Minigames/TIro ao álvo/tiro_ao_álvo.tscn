@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://owo7n7bmi44o"]
+
+[ext_resource type="Texture2D" uid="uid://c0mci25nf6uvp" path="res://Assets/placholder2/background.png" id="1_8u8e3"]
+[ext_resource type="Script" uid="uid://6xh0n8ixong3" path="res://Scenes/Minigames/TIro ao álvo/alvo.gd" id="2_dpm6d"]
+[ext_resource type="Texture2D" uid="uid://cxveebmfoi62p" path="res://Assets/Placeholder/selectbar.png" id="3_u00bs"]
+[ext_resource type="Texture2D" uid="uid://jpr5ex22fcxp" path="res://Assets/Sprite-0001.png" id="4_qfi72"]
+[ext_resource type="Script" uid="uid://bfcdweudppiuh" path="res://Scenes/Minigames/TIro ao álvo/direção.gd" id="4_u00bs"]
+[ext_resource type="Texture2D" uid="uid://bqtrk4374jmci" path="res://Assets/Placeholder/flechadireita.png" id="5_c68vn"]
+[ext_resource type="Script" uid="uid://jmi38ib4i481" path="res://Scenes/Minigames/TIro ao álvo/mira.gd" id="6_qfi72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7505w"]
+size = Vector2(20, 18)
+
+[node name="Tiro ao Álvo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_8u8e3")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(232, 53)
+script = ExtResource("2_dpm6d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7505w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.204082, 1)
+texture = ExtResource("3_u00bs")
+
+[node name="direção" type="CharacterBody2D" parent="."]
+position = Vector2(308, 92)
+script = ExtResource("4_u00bs")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(13, 92)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(308, 92)
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(157, 167)
+texture = ExtResource("4_qfi72")
+
+[node name="mira" type="Node2D" parent="."]
+position = Vector2(157, 152)
+script = ExtResource("6_qfi72")
+
+[node name="Flecha" type="Sprite2D" parent="mira"]
+position = Vector2(11, 0)
+texture = ExtResource("5_c68vn")
+
+[node name="Marker2D" type="Marker2D" parent="mira"]
+position = Vector2(18, 0)
+
+[node name="Fire rate" type="Timer" parent="mira"]
+one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="timeout" from="mira/Fire rate" to="mira" method="_on_timer_timeout"]

@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("interact"):
 			for area in area_2d.get_overlapping_areas():
 				print(area_2d.get_overlapping_areas())
-				if area.is_in_group("item") and area.pickable:
+				if area.is_in_group("item"):
 					if canvas_layer.add_item(area):
 						area.delete()
 				if area.is_in_group("minigame"):

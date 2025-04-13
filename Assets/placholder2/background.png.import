@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djvql7gq0xy67"
-path="res://.godot/imported/Mystery Pack 47.png-ced1c2fedd171e2e12840525ca17f1f8.ctex"
+uid="uid://c0mci25nf6uvp"
+path="res://.godot/imported/background.png-8c84dfcbd0273056b4954dba93c68e0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mystery Pack 47.png"
-dest_files=["res://.godot/imported/Mystery Pack 47.png-ced1c2fedd171e2e12840525ca17f1f8.ctex"]
+source_file="res://Assets/placholder2/background.png"
+dest_files=["res://.godot/imported/background.png-8c84dfcbd0273056b4954dba93c68e0f.ctex"]
 
 [params]
 

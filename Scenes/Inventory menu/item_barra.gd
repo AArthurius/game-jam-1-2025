@@ -23,6 +23,10 @@ func useItem(player):
 	else:
 		queue_free()
 
+func isUsable():
+	if realItem != null:
+		return realItem.usable
+
 func _process(delta: float) -> void:
 	if realItem == null:
 		queue_free()

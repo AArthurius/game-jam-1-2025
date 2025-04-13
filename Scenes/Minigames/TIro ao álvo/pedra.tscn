@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxfrsiq04x8s6"]
+
+[ext_resource type="Texture2D" uid="uid://bfffinocfd0fs" path="res://Assets/Placeholder/poção.png" id="1_ekkrv"]
+[ext_resource type="Script" uid="uid://bv7iw5daapwnf" path="res://Scenes/Minigames/TIro ao álvo/pedra.gd" id="1_kcuml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcuml"]
+size = Vector2(5, 5)
+
+[node name="Pedra" type="CharacterBody2D"]
+script = ExtResource("1_kcuml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_ekkrv")
+region_enabled = true
+region_rect = Rect2(5.885, 0, 5, 5)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kcuml")

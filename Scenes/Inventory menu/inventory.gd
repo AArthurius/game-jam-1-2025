@@ -47,11 +47,11 @@ func add_item(info: item) -> bool:
 
 func loadInventory(info: PackedScene):
 	var newItem = ITEM_BARRA.instantiate()
-	newItem.info = info	
+	newItem.info = info
 	add_child(newItem)
 
 func use_item():
-	if get_child(selectedChild) != null:
+	if get_child(selectedChild) != null and get_child(selectedChild).isUsable():
 		get_child(selectedChild).useItem(player)
 		get_child(selectedChild).queue_free()
 		selectedChild = 0
