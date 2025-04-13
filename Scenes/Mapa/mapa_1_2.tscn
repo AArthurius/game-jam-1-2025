@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvgkukngb7gh6"]
+[gd_scene load_steps=6 format=3 uid="uid://cvgkukngb7gh6"]
 
 [ext_resource type="PackedScene" uid="uid://bud7kgbkfq8gb" path="res://Scenes/canvas_layer.tscn" id="1_ihors"]
 [ext_resource type="PackedScene" uid="uid://dl1j70r38mok0" path="res://Scenes/player.tscn" id="2_fu37y"]
+[ext_resource type="Texture2D" uid="uid://c4qjd8voxo0e6" path="res://Assets/Placeholder/bar selected.png" id="3_grd7u"]
+[ext_resource type="PackedScene" uid="uid://dav5rsplcfbjd" path="res://Scenes/Mapa/teleporter.tscn" id="4_p4kit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_endih"]
+size = Vector2(98, 18)
 
 [node name="Mapa 1 2" type="Node2D"]
 
@@ -12,3 +17,13 @@ position = Vector2(54, 169)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_top = -32
+
+[node name="BarSelected" type="Sprite2D" parent="."]
+position = Vector2(54, 92)
+texture = ExtResource("3_grd7u")
+
+[node name="Teleporter" parent="BarSelected" instance=ExtResource("4_p4kit")]
+mapaAlvo = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarSelected/Teleporter"]
+shape = SubResource("RectangleShape2D_endih")

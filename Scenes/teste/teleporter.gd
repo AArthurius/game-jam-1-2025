@@ -1,6 +1,8 @@
 extends Area2D
 
-const MAPA_1_2 = "res://Scenes/Mapa/mapa_1_2.tscn"
+var mapas = ["res://Scenes/Mapa/mapa_1_2.tscn", "res://Scenes/Mapa/Mapa 2 2.tscn"]
+
+@export var mapaAlvo:int = 0
 
 func _on_body_entered(body: Node2D) -> void:
-	body.goto(MAPA_1_2)
+	body.goto(mapas[mapaAlvo])

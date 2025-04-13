@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bf67vmtgg8ttm"]
+[gd_scene load_steps=17 format=4 uid="uid://bf67vmtgg8ttm"]
 
 [ext_resource type="Texture2D" uid="uid://c41baylurreay" path="res://Assets/Placeholder/Dungeon_Tileset.png" id="1_2sn7o"]
 [ext_resource type="Texture2D" uid="uid://b6rgm33vmqack" path="res://Assets/Sprite-0004.png" id="1_8c7xs"]
@@ -10,8 +10,7 @@
 [ext_resource type="Script" uid="uid://bcjuovktdlm7f" path="res://Scenes/Minigames/minigame_starter.gd" id="5_timr8"]
 [ext_resource type="PackedScene" uid="uid://s04ebnto4vhi" path="res://Scenes/itens/item chave.tscn" id="7_42t2r"]
 [ext_resource type="PackedScene" uid="uid://cor57lteraftn" path="res://Scenes/teste/passagem.tscn" id="8_borxw"]
-[ext_resource type="PackedScene" uid="uid://bshn6ypksi42g" path="res://Scenes/fantasma.tscn" id="9_x0opo"]
-[ext_resource type="Script" uid="uid://bw814y00dpvjv" path="res://Scenes/teste/teleporter.gd" id="11_rmcew"]
+[ext_resource type="PackedScene" uid="uid://dav5rsplcfbjd" path="res://Scenes/Mapa/teleporter.tscn" id="11_rmcew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5u3t"]
 texture = ExtResource("1_2sn7o")
@@ -188,15 +187,8 @@ position = Vector2(94, 68)
 position = Vector2(72, -8)
 collision_layer = 4
 
-[node name="Teleporter" type="Area2D" parent="Passagem"]
-collision_layer = 4
-script = ExtResource("11_rmcew")
+[node name="Teleporter" parent="Passagem" instance=ExtResource("11_rmcew")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Passagem/Teleporter"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Passagem/Teleporter"]
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_a5u3t")
-
-[node name="Fantasma" parent="." instance=ExtResource("9_x0opo")]
-position = Vector2(170, 89)
-
-[connection signal="body_entered" from="Passagem/Teleporter" to="Passagem/Teleporter" method="_on_body_entered"]
