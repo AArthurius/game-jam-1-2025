@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var area_2d: Area2D = $Area2D
 @onready var resetBonus: Timer = $"Reset Bonus"
-
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var canvas_layer: CanvasLayer = $"../CanvasLayer"
 
 const SPEED = 10000
@@ -45,12 +45,16 @@ func lookDirection():
 	match direção:
 		Vector2(1, 0):
 			area_2d.rotation = deg_to_rad(-90)
+			sprite.play("direita")
 		Vector2(-1, 0):
 			area_2d.rotation = deg_to_rad(90)
+			sprite.play("esquerda")
 		Vector2(0, 1):
 			area_2d.rotation = deg_to_rad(0)
+			sprite.play("baixo")
 		Vector2(0, -1):
 			area_2d.rotation = deg_to_rad(180)
+			sprite.play("cima")
 
 func inventoryManager():
 	if Input.is_action_just_pressed("tab"):

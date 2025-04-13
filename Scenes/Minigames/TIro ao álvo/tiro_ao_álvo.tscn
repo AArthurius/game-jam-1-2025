@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c0mci25nf6uvp" path="res://Assets/placholder2/background.png" id="1_8u8e3"]
 [ext_resource type="Script" uid="uid://6xh0n8ixong3" path="res://Scenes/Minigames/TIro ao álvo/alvo.gd" id="2_dpm6d"]
 [ext_resource type="Texture2D" uid="uid://cxveebmfoi62p" path="res://Assets/Placeholder/selectbar.png" id="3_u00bs"]
-[ext_resource type="Texture2D" uid="uid://jpr5ex22fcxp" path="res://Assets/Sprite-0001.png" id="4_qfi72"]
 [ext_resource type="Script" uid="uid://bfcdweudppiuh" path="res://Scenes/Minigames/TIro ao álvo/direção.gd" id="4_u00bs"]
 [ext_resource type="Texture2D" uid="uid://bqtrk4374jmci" path="res://Assets/Placeholder/flechadireita.png" id="5_c68vn"]
+[ext_resource type="Texture2D" uid="uid://8uwdagniovcq" path="res://Assets/personagem.png" id="5_u00bs"]
 [ext_resource type="Script" uid="uid://jmi38ib4i481" path="res://Scenes/Minigames/TIro ao álvo/mira.gd" id="6_qfi72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7505w"]
@@ -45,11 +45,14 @@ position = Vector2(13, 92)
 position = Vector2(308, 92)
 
 [node name="Sprite-0001" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(157, 167)
-texture = ExtResource("4_qfi72")
+texture = ExtResource("5_u00bs")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 22)
 
 [node name="mira" type="Node2D" parent="."]
-position = Vector2(157, 152)
+position = Vector2(157, 160)
 script = ExtResource("6_qfi72")
 
 [node name="Flecha" type="Sprite2D" parent="mira"]
