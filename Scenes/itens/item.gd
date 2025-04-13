@@ -5,6 +5,9 @@ var nome: String
 var copy: PackedScene
 var usable: bool
 
+func itemPego():
+	pass
+
 func useItem(player):
 	pass
 

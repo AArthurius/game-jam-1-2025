@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3wlom2g346kd"
-path="res://.godot/imported/Sprite-0005 (1).png-277418bec3d70560778fa91051f0f2c9.ctex"
+uid="uid://dm1eb0vx2tbf5"
+path="res://.godot/imported/esqueleto.png-daccd543dc035292aad17dd2fa2e4896.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite-0005 (1).png"
-dest_files=["res://.godot/imported/Sprite-0005 (1).png-277418bec3d70560778fa91051f0f2c9.ctex"]
+source_file="res://Assets/esqueleto.png"
+dest_files=["res://.godot/imported/esqueleto.png-daccd543dc035292aad17dd2fa2e4896.ctex"]
 
 [params]
 

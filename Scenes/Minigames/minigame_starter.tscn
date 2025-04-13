@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqu4n2c73t1ny"]
+
+[ext_resource type="Script" uid="uid://bcjuovktdlm7f" path="res://Scenes/Minigames/minigame_starter.gd" id="1_jjcwe"]
+[ext_resource type="Texture2D" uid="uid://fbahi3w1xywf" path="res://Assets/Placeholder/hotbar.png" id="2_dic1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_timr8"]
+size = Vector2(32, 32)
+
+[node name="Minigame starter" type="Area2D" groups=["minigame"]]
+collision_layer = 12
+script = ExtResource("1_jjcwe")
+
+[node name="Hotbar" type="Sprite2D" parent="."]
+texture = ExtResource("2_dic1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_timr8")

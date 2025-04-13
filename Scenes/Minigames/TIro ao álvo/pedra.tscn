@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcuml"]
 size = Vector2(5, 5)
 
-[node name="Pedra" type="CharacterBody2D"]
+[node name="Pedra" type="CharacterBody2D" groups=["pedra"]]
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("1_kcuml")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,7 +17,5 @@ texture = ExtResource("1_ekkrv")
 region_enabled = true
 region_rect = Rect2(5.885, 0, 5, 5)
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kcuml")

@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var inventoryTab: TextureRect = $UI/InventoryTab
 @onready var inventory: VBoxContainer = $UI/InventoryTab/Inventory
 @onready var player: CharacterBody2D = $"../Player"
-
+@onready var fogueira: Area2D = $"../Fogueira"
 
 func switchInventory():
 	inventoryTab.visible = !inventoryTab.visible
@@ -24,8 +24,16 @@ func scroll(direction):
 
 func interactPassagem(body):
 	for i in inventory.get_children():
-		print(i)
-		body.open(i.realItem)
+		if body.open(i.realItem):
+			i.queue_free()
+			return
 
 func getInventory():
 	return inventory.get_children()
+
+func alimentarFogueira():
+	for i in inventory.get_children():
+		if i.realItem.nome == "lenha":
+			fogueira.alimentarFogueira()
+			i.queue_free()
+			return

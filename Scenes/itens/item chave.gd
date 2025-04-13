@@ -5,3 +5,6 @@ func inicializar():
 	nome = "chave"
 	copy = preload("res://Scenes/itens/item chave.tscn")
 	usable = false
+
+func itemPego():
+	Global.addItemPego(nome)

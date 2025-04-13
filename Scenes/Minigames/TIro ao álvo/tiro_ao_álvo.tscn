@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://owo7n7bmi44o"]
+[gd_scene load_steps=10 format=3 uid="uid://owo7n7bmi44o"]
 
 [ext_resource type="Texture2D" uid="uid://c0mci25nf6uvp" path="res://Assets/placholder2/background.png" id="1_8u8e3"]
+[ext_resource type="Script" uid="uid://cbotxbircucd0" path="res://Scenes/Minigames/TIro ao álvo/tiro_ao_álvo.gd" id="1_qfi72"]
 [ext_resource type="Script" uid="uid://6xh0n8ixong3" path="res://Scenes/Minigames/TIro ao álvo/alvo.gd" id="2_dpm6d"]
 [ext_resource type="Texture2D" uid="uid://cxveebmfoi62p" path="res://Assets/Placeholder/selectbar.png" id="3_u00bs"]
 [ext_resource type="Script" uid="uid://bfcdweudppiuh" path="res://Scenes/Minigames/TIro ao álvo/direção.gd" id="4_u00bs"]
@@ -18,33 +19,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qfi72")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(160, 90)
 texture = ExtResource("1_8u8e3")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(232, 53)
+[node name="Alvo" type="CharacterBody2D" parent="."]
+position = Vector2(23, 46)
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("2_dpm6d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_7505w")
+[node name="Area2D" type="Area2D" parent="Alvo"]
+collision_layer = 128
+collision_mask = 128
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Alvo/Area2D"]
 scale = Vector2(0.204082, 1)
 texture = ExtResource("3_u00bs")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alvo/Area2D"]
+shape = SubResource("RectangleShape2D_7505w")
+
 [node name="direção" type="CharacterBody2D" parent="."]
 position = Vector2(308, 92)
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("4_u00bs")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(13, 92)
+position = Vector2(13, 46)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(308, 92)
+position = Vector2(308, 46)
 
-[node name="Sprite-0001" type="Sprite2D" parent="."]
+[node name="player" type="Sprite2D" parent="."]
 z_index = 10
 position = Vector2(157, 167)
 texture = ExtResource("5_u00bs")
@@ -65,5 +76,5 @@ position = Vector2(18, 0)
 [node name="Fire rate" type="Timer" parent="mira"]
 one_shot = true
 
-[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="body_entered" from="Alvo/Area2D" to="Alvo" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="mira/Fire rate" to="mira" method="_on_timer_timeout"]
