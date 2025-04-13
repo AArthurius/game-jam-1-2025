@@ -21,3 +21,11 @@ func scroll(direction):
 		inventory.selectedChild += 1
 	elif direction == "up":
 		inventory.selectedChild -= 1
+
+func interactPassagem(body):
+	for i in inventory.get_children():
+		print(i)
+		body.open(i.realItem)
+
+func getInventory():
+	return inventory.get_children()

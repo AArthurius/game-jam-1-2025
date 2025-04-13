@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 		inventoryManager()
 		
 		if Input.is_action_just_pressed("interact"):
+			print(area_2d.get_overlapping_bodies())
 			for area in area_2d.get_overlapping_areas():
 				print(area_2d.get_overlapping_areas())
 				if area.is_in_group("item"):
@@ -27,8 +28,15 @@ func _process(delta: float) -> void:
 				if area.is_in_group("minigame"):
 					area.startMinigame()
 					inGame = true
+			for body in area_2d.get_overlapping_bodies():
+				print(body)
+				if body.is_in_group("passagem"):
+					canvas_layer.interactPassagem(body)
 		
 		lookDirection()
+
+func kill():
+	Global.goto_scene("res://Scenes/Mapa/Mapa 2 2.tscn", [])
 
 func minigameEnd():
 	inGame = false
@@ -67,3 +75,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_reset_bonus_timeout() -> void:
 	bonusSpeed = 0
+
+func goto(path):
+	Global.goto_scene(path, canvas_layer.getInventory())

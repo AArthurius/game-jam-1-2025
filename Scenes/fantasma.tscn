@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bshn6ypksi42g"]
+
+[ext_resource type="Script" uid="uid://ww4keowqcg0a" path="res://fantasma.gd" id="1_v7gvw"]
+[ext_resource type="Texture2D" uid="uid://c41baylurreay" path="res://Assets/Placeholder/Dungeon_Tileset.png" id="2_5w6f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gm2q"]
+size = Vector2(13, 14)
+
+[node name="Fantasma" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_v7gvw")
+
+[node name="DungeonTileset" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("2_5w6f7")
+region_enabled = true
+region_rect = Rect2(112, 112, 16, 16)
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_6gm2q")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

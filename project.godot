@@ -23,13 +23,14 @@ Global="*res://Scenes/teste/Global.gd"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
 [global_group]
 
 item=""
+passagem=""
 
 [input]
 

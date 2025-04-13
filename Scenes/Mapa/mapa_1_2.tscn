@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgkukngb7gh6"]
+
+[ext_resource type="PackedScene" uid="uid://bud7kgbkfq8gb" path="res://Scenes/canvas_layer.tscn" id="1_ihors"]
+[ext_resource type="PackedScene" uid="uid://dl1j70r38mok0" path="res://Scenes/player.tscn" id="2_fu37y"]
+
+[node name="Mapa 1 2" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_ihors")]
+
+[node name="Player" parent="." instance=ExtResource("2_fu37y")]
+position = Vector2(54, 169)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_top = -32

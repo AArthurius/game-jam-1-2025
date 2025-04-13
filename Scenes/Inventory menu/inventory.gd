@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 		return
 	
 	selectItem()
-	
 
 func selectItem():
 	if selectedChild > get_children().size():
