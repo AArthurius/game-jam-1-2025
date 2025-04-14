@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 320.0
 offset_bottom = 180.0
 texture = ExtResource("1_w4ja1")
@@ -42,6 +43,7 @@ text = "Sair"
 flat = true
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_left = 101.0
 offset_top = 24.0
 offset_right = 229.0
