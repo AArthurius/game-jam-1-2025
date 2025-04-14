@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Jam 1 2025"
-run/main_scene="uid://bf67vmtgg8ttm"
+run/main_scene="uid://dgebp083jwrv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/Placeholder/icon.svg"
 

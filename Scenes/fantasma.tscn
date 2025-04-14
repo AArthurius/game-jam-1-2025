@@ -1,7 +1,43 @@
-[gd_scene load_steps=8 format=3 uid="uid://bshn6ypksi42g"]
+[gd_scene load_steps=13 format=3 uid="uid://bshn6ypksi42g"]
 
 [ext_resource type="Script" uid="uid://ww4keowqcg0a" path="res://fantasma.gd" id="1_v7gvw"]
-[ext_resource type="Texture2D" uid="uid://dm1eb0vx2tbf5" path="res://Assets/esqueleto.png" id="2_v7gvw"]
+[ext_resource type="Texture2D" uid="uid://wf8jahay1kh8" path="res://Assets/Sprite-0006.png" id="2_v7gvw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w6f7"]
+atlas = ExtResource("2_v7gvw")
+region = Rect2(0, 0, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gm2q"]
+atlas = ExtResource("2_v7gvw")
+region = Rect2(28, 0, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2ssq"]
+atlas = ExtResource("2_v7gvw")
+region = Rect2(56, 0, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5tb4"]
+atlas = ExtResource("2_v7gvw")
+region = Rect2(84, 0, 28, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j10oi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w6f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gm2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2ssq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5tb4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gm2q"]
 size = Vector2(26, 31)
@@ -114,10 +150,10 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_v7gvw")
 
-[node name="DungeonTileset" type="Sprite2D" parent="."]
-position = Vector2(1, 1)
-texture = ExtResource("2_v7gvw")
-region_rect = Rect2(112, 112, 16, 16)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j10oi")
+autoplay = "default"
+frame_progress = 0.220478
 
 [node name="hitbox" type="Area2D" parent="."]
 collision_layer = 2

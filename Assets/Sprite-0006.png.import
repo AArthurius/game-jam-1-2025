@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7db84c58y67j"
-path="res://.godot/imported/Tile set night.png-ef466c432c9cc741775821373ad18b7e.ctex"
+uid="uid://wf8jahay1kh8"
+path="res://.godot/imported/Sprite-0006.png-d86614c8d308fbd5591b17b93428688d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tile set night.png"
-dest_files=["res://.godot/imported/Tile set night.png-ef466c432c9cc741775821373ad18b7e.ctex"]
+source_file="res://Assets/Sprite-0006.png"
+dest_files=["res://.godot/imported/Sprite-0006.png-d86614c8d308fbd5591b17b93428688d.ctex"]
 
 [params]
 

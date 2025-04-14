@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://dqn06cgmdq3iy"]
+[gd_scene load_steps=4 format=3 uid="uid://dqn06cgmdq3iy"]
+
+[ext_resource type="Texture2D" uid="uid://be7o32owg6dtt" path="res://Assets/o;.png" id="1_w4ja1"]
+[ext_resource type="Texture2D" uid="uid://ce026208nehyo" path="res://Assets/barra 1.png" id="2_em44w"]
+[ext_resource type="FontFile" uid="uid://dy74jctltt37f" path="res://Assets/Placeholder/PixelOperator.ttf" id="3_em3fp"]
 
 [node name="Win" type="Control"]
 layout_mode = 3
@@ -7,3 +11,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_w4ja1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 1.0
+offset_right = 229.0
+offset_bottom = 179.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_em44w")
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer/TextureRect2"]
+layout_mode = 2
+offset_top = -3.0
+offset_right = 64.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("3_em3fp")
+text = "Sair"
+flat = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+offset_left = 101.0
+offset_top = 24.0
+offset_right = 229.0
+offset_bottom = 64.0
+
+[node name="Label" type="Label" parent="CenterContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_em3fp")
+text = "Você venceu"

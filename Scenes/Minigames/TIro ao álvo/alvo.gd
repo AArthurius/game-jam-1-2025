@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var direction:Vector2
 var speed = 5000
-var health = 0
+var health = 3
 
 func _ready() -> void:
 	if randi_range(0, 2) == 0:
